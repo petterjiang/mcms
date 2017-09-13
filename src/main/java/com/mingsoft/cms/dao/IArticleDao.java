@@ -81,7 +81,7 @@ public interface IArticleDao extends IBaseDao {
 	 * @return 文章总数
 	 */
 	int count(@Param("webId") int webId, @Param("basicCategoryIds") int[] basicCategoryIds, @Param("flag") String flag,
-			@Param("noFlag") String noFlag, @Param("article") ArticleEntity article);
+			  @Param("noFlag") String noFlag, @Param("article") ArticleEntity article);
 
 	/**
 	 * 通过视图表来查询文章总数 ，
@@ -107,7 +107,7 @@ public interface IArticleDao extends IBaseDao {
 	 */
 	@Deprecated
 	List<ArticleEntity> queryListByTime(@Param("basicCategoryId") int basicCategoryId,
-			@Param("dateTime") String dateTime, @Param("appId") int appId);
+										@Param("dateTime") String dateTime, @Param("appId") int appId);
 
 	/**
 	 * 通过视图表来查询文章列表
@@ -125,7 +125,7 @@ public interface IArticleDao extends IBaseDao {
 	 */
 	@Deprecated
 	List<BaseEntity> queryPageByCategoryId(@Param("categoryId") int categoryId, @Param("categoryIds") List categoryIds,
-			@Param("page") PageUtil page, @Param("contentModelTableName") String contentModelTableName);
+										   @Param("page") PageUtil page, @Param("contentModelTableName") String contentModelTableName);
 
 	/**
 	 * 通过分类id获取文章内容
@@ -161,7 +161,7 @@ public interface IArticleDao extends IBaseDao {
 	@Deprecated
 	@SuppressWarnings("rawtypes")
 	int getCountByColumnId(@Param("webId") int webId, @Param("basicCategoryIds") int[] basicCategoryIds,
-			@Param("flag") String flag, @Param("noFlag") String noFlag);
+						   @Param("flag") String flag, @Param("noFlag") String noFlag);
 
 	/**
 	 * 查找basicId上一篇文章
@@ -175,7 +175,7 @@ public interface IArticleDao extends IBaseDao {
 	 * @return
 	 */
 	ArticleEntity getNextOrPrevious(@Param("appId") int appId, @Param("basicId") int basicId,
-			@Param("flag") boolean flag, @Param("categoryId") Integer categoryId);
+									@Param("flag") boolean flag, @Param("categoryId") Integer categoryId);
 
 	/**
 	 * 根据查询文章实体总数
@@ -189,7 +189,7 @@ public interface IArticleDao extends IBaseDao {
 	 */
 	@Deprecated
 	int getSearchCount(@Param("tableName") String tableName, @Param("map") Map<String, List> map,
-			@Param("websiteId") int websiteId, @Param("ids") List ids);
+					   @Param("websiteId") int websiteId, @Param("ids") List ids);
 
 	/**
 	 * 文章查询
@@ -210,8 +210,8 @@ public interface IArticleDao extends IBaseDao {
 	 * @return 文章集合
 	 */
 	List<ArticleEntity> query(@Param("webId") int webId, @Param("basicCategoryIds") int[] basicCategoryIds,
-			@Param("flag") String flag, @Param("noFlag") String noFlag, @Param("orderBy") String orderBy,
-			@Param("order") boolean order, @Param("article") ArticleEntity article);
+							  @Param("flag") String flag, @Param("noFlag") String noFlag, @Param("orderBy") String orderBy,
+							  @Param("order") boolean order, @Param("article") ArticleEntity article);
 
 	/**
 	 * 通过文章标题来查询文章集合
@@ -227,7 +227,7 @@ public interface IArticleDao extends IBaseDao {
 	 */
 	@Deprecated
 	List queryByArticleTitle(@Param("articleTitle") String articleTitle, @Param("webId") int webId,
-			@Param("modelCode") String modelCode);
+							 @Param("modelCode") String modelCode);
 
 	/**
 	 * 根据页面栏目的id获取与其绑定的文章实体
@@ -250,8 +250,8 @@ public interface IArticleDao extends IBaseDao {
 	 */
 	@Deprecated
 	List<ArticleEntity> queryListForSearch(@Param("tableName") String tableName, @Param("map") Map<String, List> map,
-			@Param("page") PageUtil page, @Param("websiteId") int websiteId, @Param("ids") List ids,
-			@Param("sortMap") Map sortMap);
+										   @Param("page") PageUtil page, @Param("websiteId") int websiteId, @Param("ids") List ids,
+										   @Param("sortMap") Map sortMap);
 
 	/**
 	 * 根据站点获取文章列表
@@ -268,7 +268,7 @@ public interface IArticleDao extends IBaseDao {
 	 */
 	@Deprecated
 	public List<ArticleEntity> queryPageListByWebsiteId(@Param("webId") int webId, @Param("pageNo") int pageNo, @Param("pageSize") int pageSize,
-			@Param("orderBy") String orderBy, @Param("order") boolean order);
+														@Param("orderBy") String orderBy, @Param("order") boolean order);
 	
 	/**
 	 * 获取站点下文章总条数

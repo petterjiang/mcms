@@ -194,7 +194,7 @@ public class CmsParser extends IGeneralParser {
 					if (!StringUtil.isBlank(temp.get(MOBILE) )) {
 						mobilePath = temp.get(MOBILE)+"";
 					}
-					if (temp.get(SEARCH_LIST_ARTICLE)  instanceof  java.util.List) {
+					if (temp.get(SEARCH_LIST_ARTICLE)  instanceof  List) {
 						//搜索时候的文章列表数据
 						searchList = (List)temp.get(SEARCH_LIST_ARTICLE);
 					}

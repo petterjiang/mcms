@@ -143,12 +143,12 @@ public class ArticleAction extends BaseAction {
 	 * 
 	 * @return
 	 */
-	public List<Map.Entry<String, String>> articleType() {
+	public List<Entry<String, String>> articleType() {
 		Map<String, String> map = getMapByProperties(com.mingsoft.cms.constant.Const.ARTICLE_ATTRIBUTE_RESOURCE);
 		Set<Entry<String, String>> set = map.entrySet();
-		List<Map.Entry<String, String>> articleType = new ArrayList<Map.Entry<String, String>>();
+		List<Entry<String, String>> articleType = new ArrayList<Entry<String, String>>();
 		for (Iterator<Entry<String, String>> it = set.iterator(); it.hasNext();) {
-			Map.Entry<String, String> entry = (Map.Entry<String, String>) it.next();
+			Entry<String, String> entry = (Entry<String, String>) it.next();
 			articleType.add(entry);
 		}
 		return articleType;

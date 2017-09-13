@@ -88,7 +88,7 @@ public class MCmsAction extends com.mingsoft.mdiy.action.BaseAction{
 	 * @param key
 	 */
 	@RequestMapping("/{diy}.do")
-	@ExceptionHandler(java.lang.NullPointerException.class) 
+	@ExceptionHandler(NullPointerException.class)
 	public void diy(@PathVariable(value = "diy") String diy, HttpServletRequest req, HttpServletResponse resp) {
 		String content = this.generaterPage("mcms/" + diy,cmsParser,req);
 		if (StringUtil.isBlank(content)) {

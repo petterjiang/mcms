@@ -191,7 +191,7 @@ public interface IArticleBiz extends IBasicBiz {
 	 * @return 文章集合
 	 */
 	List<ArticleEntity> query(int webId, int[] basicCategoryIds, String flag, String noFlag, String orderBy,
-			boolean order, ArticleEntity article);
+							  boolean order, ArticleEntity article);
 
 	/**
 	 * 根据分类与时间查询文章列表
@@ -241,7 +241,7 @@ public interface IArticleBiz extends IBasicBiz {
 	 */
 	@Deprecated
 	public List<ArticleEntity> queryListForSearch(ContentModelEntity conntentModel, Map whereMap, PageUtil page,
-			int appId, List ids, Map orders);
+												  int appId, List ids, Map orders);
 
 	/**
 	 * 通过视图表来查询文章列表
